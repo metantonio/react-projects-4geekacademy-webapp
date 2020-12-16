@@ -5,10 +5,20 @@ import { Context } from "../store/appContext";
 
 export const Single = props => {
 	const { store, actions } = useContext(Context);
-	const params = useParams();
+	const [character, setCharacter] = useState({});
+	const params = useParams(); // { id: 2 }
+	useEffect(
+		() => {
+			let selectedCharacter =
+				store.characters.length > 0 ? store.characters.find(character => character.id == params.id) : {};
+			setCharacter(selectedCharacter);
+		},
+		[store.characters, params]
+	);
 	return (
 		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1>
+			<h1 className="display-4">{character.name && character.name}</h1>
+			<p>{character.status}</p>
 
 			<hr className="my-4" />
 
@@ -21,6 +31,4 @@ export const Single = props => {
 	);
 };
 
-Single.propTypes = {
-	match: PropTypes.object
-};
+Single.propTypes = {};
