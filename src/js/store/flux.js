@@ -8,10 +8,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			// Use getActions to call a function within a fuction
 			getCharacters: async () => {
-				let url = `${BASE_URL}/people`;
+				let url = `${BASE_URL}people/`;
 				try {
 					let response = await fetch(url);
-					let responseObject = await response.json();
+					let responseObject = await response.json(); //parchear la respuesta json
 					setStore({
 						characters: responseObject.results
 					});
