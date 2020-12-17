@@ -16,6 +16,11 @@ export const Home = props => {
 					return <Card key={character.id} item={character} />;
 				})}
 			</div>
+			<div className="card-holder d-flex justify-content-start col-10">
+				{store.characters.map((character, index) => {
+					return <Card key={character.id} item={character} />;
+				})}
+			</div>
 		</div>
 	);
 };
