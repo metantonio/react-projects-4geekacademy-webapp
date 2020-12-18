@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
-import { Card } from "../component/Card";
+import { CardPeople } from "../component/cardPeople";
+import { CardPlanet } from "../component/cardPlanet";
 import { Context } from "../store/appContext";
 
 export const Home = props => {
@@ -13,12 +14,15 @@ export const Home = props => {
 			</div>
 			<div className="card-holder d-flex justify-content-start col-10">
 				{store.characters.map((character, index) => {
-					return <Card key={character.id} item={character} />;
+					return <CardPeople key={character.url} item={character} />;
 				})}
 			</div>
+			<div className="d-flex w-100 text-center m-4">
+				<h2 className="display-4 w-100 text-center">{"Planets"}</h2>
+			</div>
 			<div className="card-holder d-flex justify-content-start col-10">
-				{store.characters.map((character, index) => {
-					return <Card key={character.url} item={character} />;
+				{store.planets.map((planet, index) => {
+					return <CardPlanet key={planet.url} item={planet} />;
 				})}
 			</div>
 		</div>

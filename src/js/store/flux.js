@@ -3,7 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			characters: [],
-			planets: []
+			planets: [],
+			vehicles: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -19,13 +20,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log(error);
 				}
 			},
-			getLocations: async () => {
-				let url = `${BASE_URL}/location`;
+			getPlanets: async () => {
+				let url = `${BASE_URL}planets/`;
 				try {
 					let response = await fetch(url);
 					let responseObject = await response.json();
 					setStore({
-						locations: responseObject.results
+						planets: responseObject.results
 					});
 				} catch (error) {
 					console.log(error);
