@@ -19,4 +19,23 @@ h2 {
     color:red;
     justify-content: start;
     margin-left: 10%;  
+    font-weight: bolder;
+    font-style: normal;
+}
+
+nav *{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+body {
+    background-color: black;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+#logo-home{
+    height: auto;
 }
