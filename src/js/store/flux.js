@@ -31,6 +31,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 				} catch (error) {
 					console.log(error);
 				}
+			},
+			getVehicles: async () => {
+				let url = `${BASE_URL}vehicles/`;
+				try {
+					let response = await fetch(url);
+					let responseObject = await response.json();
+					setStore({
+						vehicles: responseObject.results
+					});
+				} catch (error) {
+					console.log(error);
+				}
 			}
 		}
 	};
