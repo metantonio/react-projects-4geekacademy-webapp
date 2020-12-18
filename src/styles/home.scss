@@ -1,3 +1,22 @@
 .card-holder {
     overflow-x: scroll;
 }
+
+ul {
+    text-align: start;
+    align-content: flex-start;
+}
+
+.card-title {
+    text-align: start;
+    text-emphasis-color: red;
+    margin-left: 20px;
+}
+
+h2 {
+    text-align: start;
+    text-emphasis-color: red;
+    color:red;
+    justify-content: start;
+    margin-left: 10%;  
+}

@@ -10,7 +10,7 @@ export const Home = props => {
 	return (
 		<div className="text-center mt-5 d-flex flex-column align-items-center">
 			<div className="d-flex w-100 text-center m-4">
-				<h2 className="display-4 w-100 text-center">{"Characters"}</h2>
+				<h2 className="display-4 w-100">{"Characters"}</h2>
 			</div>
 			<div className="card-holder d-flex justify-content-start col-10">
 				{store.characters.map((character, index) => {
@@ -18,7 +18,7 @@ export const Home = props => {
 				})}
 			</div>
 			<div className="d-flex w-100 text-center m-4">
-				<h2 className="display-4 w-100 text-center">{"Planets"}</h2>
+				<h2 className="display-4 w-100">{"Planets"}</h2>
 			</div>
 			<div className="card-holder d-flex justify-content-start col-10">
 				{store.planets.map((planet, index) => {
