@@ -12,7 +12,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					let response = await fetch(url);
 					let responseObject = await response.json(); //parchear la respuesta json
 					setStore({
-						contact: responseObject.results
+						contacts: responseObject.results
 					});
 				} catch (error) {
 					console.log(error);
