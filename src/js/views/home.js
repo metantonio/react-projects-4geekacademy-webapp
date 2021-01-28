@@ -12,7 +12,7 @@ export const Home = props => {
 			<div className="d-flex w-100 text-center m-4">
 				<h2 className="display-4 w-100">{"Contacts"}</h2>
 			</div>
-			<div className="card-holder d-flex justify-content-start">
+			<div className="card-holder d-flex justify-content-start col-10">
 				{store.contacts.map((contact, index) => {
 					return <CardPeople key={contact.id} item={contact} />;
 				})}
