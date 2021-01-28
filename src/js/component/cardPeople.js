@@ -18,7 +18,7 @@ export const CardPeople = ({ item }) => {
 					</ul>
 				</p>
 				<div className="col-md-auto">
-					<Link to={`/single/${item.url}`} className="btn btn-primary col-10">
+					<Link to={`/contact/${item.url}`} className="btn btn-primary col-10">
 						{"Learn more!"}
 					</Link>
 					<i className="fa fa-heart-o col-2" aria-hidden="true" />

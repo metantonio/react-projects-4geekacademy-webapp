@@ -5,20 +5,20 @@ import { Context } from "../store/appContext";
 
 export const Single = props => {
 	const { store, actions } = useContext(Context);
-	const [character, setCharacter] = useState({});
+	const [contact, setContact] = useState({});
 	const params = useParams(); // { id: 2 }
 	useEffect(
 		() => {
-			let selectedCharacter =
-				store.characters.length > 0 ? store.characters.find(character => character.id == params.id) : {};
-			setCharacter(selectedCharacter);
+			let selectedContact =
+				store.contacts.length > 0 ? store.contacts.find(contact => contact.id == params.id) : {};
+			setContact(selectedContact);
 		},
-		[store.characters, params]
+		[store.contacts, params]
 	);
 	return (
 		<div className="jumbotron">
-			<h1 className="display-4">{character.full_name && character.full_name}</h1>
-			<p>{character.status}</p>
+			<h1 className="display-4">{contact.full_name && contact.full_name}</h1>
+			<p>{contact.id}</p>
 
 			<hr className="my-4" />
 

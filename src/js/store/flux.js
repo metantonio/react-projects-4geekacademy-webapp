@@ -7,7 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			// Use getActions to call a function within a fuction
 			getContacts: async () => {
-				let url = `${BASE_URL}contact/`;
+				let url = `${BASE_URL}contact`;
 				try {
 					let response = await fetch(url);
 					let responseObject = await response.json(); //parchear la respuesta json
