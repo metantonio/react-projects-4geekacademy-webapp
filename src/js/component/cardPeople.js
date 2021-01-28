@@ -7,12 +7,14 @@ export const CardPeople = ({ item }) => {
 		<div className="card mx-2" style={{ minWidth: "18rem" }}>
 			<img src="http://www.dummyimage.com/400x200" className="card-img-top" alt="..." />
 			<div className="card-body">
-				<h5 className="card-title">{item.name}</h5>
+				<h5 className="card-title">{item.full_name}</h5>
 				<p className="card-text">
 					<ul>
+						<li>{`Name: ${item.full_name}`}</li>
 						<li>{`Gender: ${item.gender}`}</li>
-						<li>{`Hair Color: ${item.hair_color}`}</li>
-						<li>{`Eye Color: ${item.eye_color}`}</li>
+						<li>{`Email: ${item.email}`}</li>
+						<li>{`Phone: ${item.phone}`}</li>
+						<li>{`ID: ${item.id}`}</li>
 					</ul>
 				</p>
 				<div className="col-md-auto">

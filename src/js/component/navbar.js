@@ -10,7 +10,7 @@ export const Navbar = () => {
 					src="https://www.mujer.com.pa/sites/default/files/field/image/star-wars-revista-mujer-.jpg"
 					id="logo-home"
 				/> */}
-				{<span className="navbar-brand mb-0 h1 col-8">Star Wars</span>}
+				{<span className="navbar-brand mb-0 h1 col-8">Contact List</span>}
 			</Link>
 			<div className="ml-auto col-4">
 				<button className="btn btn-primary col-4">{Favorite()}</button>

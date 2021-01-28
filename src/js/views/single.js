@@ -17,7 +17,7 @@ export const Single = props => {
 	);
 	return (
 		<div className="jumbotron">
-			<h1 className="display-4">{character.name && character.name}</h1>
+			<h1 className="display-4">{character.full_name && character.full_name}</h1>
 			<p>{character.status}</p>
 
 			<hr className="my-4" />
