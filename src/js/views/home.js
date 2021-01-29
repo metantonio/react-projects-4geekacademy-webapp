@@ -14,7 +14,7 @@ export const Home = props => {
 			</div>
 			<div className="card-holder d-flex justify-content-start col-10">
 				{store.contacts.map((contact, index) => {
-					return <CardPeople key={contact.url} item={contact} />;
+					return <CardPeople key={contact.id} item={contact} />;
 				})}
 			</div>
 		</div>
