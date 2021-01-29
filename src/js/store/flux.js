@@ -1,4 +1,4 @@
-const BASE_URL = "0.0.0.0:3000/";
+const BASE_URL = "http://localhost:3000/";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
